@@ -1,0 +1,1 @@
+DROP TYPE IF EXISTS identifier_type;
