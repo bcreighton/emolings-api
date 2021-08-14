@@ -1,9 +1,12 @@
-require('dotenv').config()
-const express = require('express')
-const morgan = require('morgan')
-const cors = require('cors')
-const helmet = require('helmet')
-const { NODE_ENV } = require('./config')
+require('dotenv').config();
+const express = require('express');
+const morgan = require('morgan');
+const cors = require('cors');
+const helmet = require('helmet');
+const { NODE_ENV } = require('./config');
+
+// Router requirements
+const userTypeRouter = require('./routers/user-type-router');
 
 const app = express()
 
@@ -34,7 +37,7 @@ app.get('/', (req, res) => {
   res.send('Hello, EMOLINGS!')
 });
 
-// app.use('/api/user-type', userTypeRouter);
+app.use('/api/user-type', userTypeRouter);
 // app.use('/api/feeling', feelingRouter);
 // app.use('/api/adv-feeling', advFeelingRouter);
 // app.use('/api/coping-skill', copingSkillRouter);

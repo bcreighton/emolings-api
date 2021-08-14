@@ -1,5 +1,5 @@
 -- TRUNCATE all tables to ensure there is not data prior to seeding
-TRUNCATE copoing_skill, adv_feelings, remider, identifier, severity, feelings, user_type RESTART IDENTITY CASCADE;
+TRUNCATE coping_skill, adv_feelings, remider, identifier, severity, feelings, user_type RESTART IDENTITY CASCADE;
 
 --insert all data into tables
 -- insert user_type
