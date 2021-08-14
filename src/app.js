@@ -10,6 +10,7 @@ const userTypeRouter = require('./routers/user-type-router');
 const feelingRouter = require('./routers/feeling-router');
 const identifierRouter = require('./routers/identifier-router');
 const advFeelingRouter = require('./routers/adv-feeling-router');
+const copingSkillRouter = require('./routers/coping-skill-router');
 
 const app = express()
 
@@ -43,7 +44,7 @@ app.get('/', (req, res) => {
 app.use('/api/user-type', userTypeRouter);
 app.use('/api/feeling', feelingRouter);
 app.use('/api/adv-feeling', advFeelingRouter);
-// app.use('/api/coping-skill', copingSkillRouter);
+app.use('/api/coping-skill', copingSkillRouter);
 // app.use('/api/severity', severityRouter);
 app.use('/api/identifier', identifierRouter);
 // app.use('/api/reminder', reminderRouter);
