@@ -7,6 +7,7 @@ const { NODE_ENV } = require('./config');
 
 // Router requirements
 const userTypeRouter = require('./routers/user-type-router');
+const feelingRouter = require('./routers/feeling-router');
 
 const app = express()
 
@@ -38,7 +39,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/user-type', userTypeRouter);
-// app.use('/api/feeling', feelingRouter);
+app.use('/api/feeling', feelingRouter);
 // app.use('/api/adv-feeling', advFeelingRouter);
 // app.use('/api/coping-skill', copingSkillRouter);
 // app.use('/api/severity', severityRouter);
