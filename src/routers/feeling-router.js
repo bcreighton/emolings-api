@@ -1,6 +1,6 @@
 const express = require('express');
 const xss = require('xss');
-const FeelingService = require('../services/feelings-service');
+const FeelingService = require('../services/feeling-service');
 
 const feelingRouter = express.Router();
 

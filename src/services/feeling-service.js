@@ -1,14 +1,14 @@
 const FeelingService = {
     getFeelings(knex) {
         return knex
-            .from('feelings')
+            .from('feeling')
             .select('*')
     },
 
     getById(knex, id) {
-        return knex('feelings')
-            .from('feelings')
-            .where('feelings.id', id)
+        return knex('feeling')
+            .from('feeling')
+            .where('feeling.id', id)
             .first()
     }
 };
