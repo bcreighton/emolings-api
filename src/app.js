@@ -39,10 +39,6 @@ app.use(validateBearerToken = (req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello, EMOLINGS!')
-});
-
 app.use('/api/user-type', userTypeRouter);
 app.use('/api/feeling', feelingRouter);
 app.use('/api/adv-feeling', advFeelingRouter);
