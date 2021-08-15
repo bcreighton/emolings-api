@@ -25,8 +25,8 @@ severityRouter
                     ? res.status(404).json({ error: { message: 'This severity does not exist'}})
                     : res.json({
                         id: severity.id,
-                        level: severity.level,
-                        color: severity.color
+                        level: xss(severity.level),
+                        color: xss(severity.color)
                     })
             })
             .catch(next)

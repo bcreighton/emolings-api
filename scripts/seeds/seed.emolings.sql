@@ -25,7 +25,7 @@ INSERT INTO feeling
 -- insert severity
 
 INSERT INTO severity
-    (level)
+    (level, color)
     VALUES
         ('Low', 'blue'),
         ('Medium', 'orange'),
@@ -41,7 +41,11 @@ INSERT INTO identifier
         ('What was the most challenging part of your day?', 'Feeling'),
         ('What was the best part of your day?', 'Feeling'),
         ('Do you want to talk about, draw it or write it down?', 'Feeling'),
-        ('Are you feeling safe or unsafe?', 'Feeling');
+        ('Are you feeling safe or unsafe?', 'Feeling'),
+        ('Do you feel like you have control of your body?', 'Severity'),
+        ('Do you feel like you have control of your words?', 'Severity'),
+        ('Does your body feel tense or more relaxed? E.g. tight like a fist, or loose like jello', 'Severity'),
+        ('Where do you feel it in your body? E.g. hands, chest, mouth, feet', 'Severity');
 
 --insert reminder
 
@@ -102,3 +106,13 @@ INSERT INTO coping_skill
         ('Ask for an explaination or an example', 'Give clarification or an example', 6),
         ('Slow down and try again', 'Suggest calming their body and trying again', 6),
         ('Practice deep breathing', 'Suggest taking some time to relax', 6);
+
+-- insert faq
+
+INSERT INTO faq
+    (question, answer)
+    VALUES
+        ('Why user EMOLINGS?', 'EMOLINGS provides a simple and fluid approach to developing communication skills of both parents and childern; while working through the deep world of emotions and feelings.This is a modern approach to the commonly used feelings chart.'),
+        ('How is EMOLINGS different from a feelings chart?', 'Feelings charts are good tools and they have served their purpose fairly well. However, there are number of areas were the standard feeling chart falls short. They are often overwhelming as the child sees too many options and colors at the same time, and they are concrete and typically cannnot be used when away from home.\nMost importantly they only solve part of the puzzle, identification. Communication and coping is the most important part of dealing with emotions and feelings; most feeling charts do not provide a solution in this area.'),
+        ('When should I use EMOLINGS?', 'Use EMOLINGS as often as necessary to help you and your child cope with their emotions and feelings. It does not always have to be a negative event.\nIn fact, using EMOLINGS in positive situations will make the negative situations much easier to breakthrough!'),
+        ('Can I track our progress?', 'Right now that feature is not available; however, this is in our plans for future improvements.');

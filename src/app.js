@@ -13,6 +13,7 @@ const advFeelingRouter = require('./routers/adv-feeling-router');
 const copingSkillRouter = require('./routers/coping-skill-router');
 const reminderRouter = require('./routers/reminder-router');
 const severityRouter = require('./routers/severity-router');
+const faqRouter = require('./routers/faq-router');
 
 const app = express()
 
@@ -46,6 +47,7 @@ app.use('/api/coping-skill', copingSkillRouter);
 app.use('/api/severity', severityRouter);
 app.use('/api/identifier', identifierRouter);
 app.use('/api/reminder', reminderRouter);
+app.use('/api/faq', faqRouter)
 
 app.use(function errorHandler(error, req, res, next) {
   let response
