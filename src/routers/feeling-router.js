@@ -26,7 +26,8 @@ feelingRouter
                     ? res.status(404).json({error: { message: 'Feeling does not exist'}})
                     : res.json({
                         id: feeling.id,
-                        name: xss(feeling.name)
+                        name: xss(feeling.name),
+                        color: xss(feeling.color)
                     })
             })
             .catch(next)

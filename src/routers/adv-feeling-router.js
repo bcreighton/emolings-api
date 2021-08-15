@@ -26,7 +26,8 @@ advFeelingRouter
                     : res.json({
                         id: adv_feeling.id,
                         name: xss(adv_feeling.name),
-                        main_feeling: adv_feeling.main_feeling
+                        main_feeling: xss(adv_feeling.main_feeling),
+                        color: xss(adv_feeling.color)
                     })
             })
             .catch(next)

@@ -6,7 +6,8 @@ const AdvFeelingService = {
             .select(
                 knex.ref('adv_feeling.id').as('id'),
                 knex.ref('adv_feeling.name').as('name'),
-                knex.ref('feeling.name').as('main_feeling')
+                knex.ref('feeling.name').as('main_feeling'),
+                knex.ref('adv_feeling.color').as('color')
             )
     },
 
@@ -18,7 +19,8 @@ const AdvFeelingService = {
             .select(
                 'adv_feeling.id AS id',
                 'adv_feeling.name AS name',
-                'feeling.name AS main_feeling'
+                'feeling.name AS main_feeling',
+                'adv_feeling.color AS color'
             )
     },
 
@@ -30,7 +32,8 @@ const AdvFeelingService = {
             .select(
                 'adv_feeling.id AS id',
                 'adv_feeling.name AS name',
-                'feeling.name AS main_feeling'
+                'feeling.name AS main_feeling',
+                'adv_feeling.color AS color'
             )
     }
 }

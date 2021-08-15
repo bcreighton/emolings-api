@@ -13,14 +13,14 @@ INSERT INTO user_type
 --insert feelings
 
 INSERT INTO feeling
-    (name)
+    (name, color)
     VALUES
-        ('Tired'),
-        ('Happy'),
-        ('Sad'),
-        ('Mad'),
-        ('Scared'),
-        ('Confused');
+        ('Tired', 'green'),
+        ('Happy', 'yellow'),
+        ('Sad', 'blue'),
+        ('Mad', 'red'),
+        ('Scared', 'orange'),
+        ('Confused', 'purple');
 
 -- insert severity
 
@@ -58,26 +58,26 @@ INSERT INTO reminder
 -- insert advanced feelings
 
 INSERT INTO adv_feeling
-    (name, main_feeling)
+    (name, main_feeling, color)
     VALUES
-        ('Exhausted', 1),
-        ('Sleepy', 1),
-        ('Drained', 1),
-        ('Loved', 2),
-        ('Silly', 2),
-        ('Confident', 2),
-        ('Lonely', 3),
-        ('Hurt', 3),
-        ('Overwhelmed', 3),
-        ('Angry', 4),
-        ('Frustrated', 4),
-        ('Annoyed', 4),
-        ('Embarrassed', 5),
-        ('Nervous', 5),
-        ('Worried', 5),
-        ('Irritated', 6),
-        ('Distracted', 6),
-        ('Scattered', 6);
+        ('Exhausted', 1, 'light-green'),
+        ('Sleepy', 1, 'green'),
+        ('Drained', 1, 'dark-green'),
+        ('Loved', 2, 'light-yellow'),
+        ('Silly', 2, 'yellow'),
+        ('Confident', 2, 'dark-yellow'),
+        ('Lonely', 3, 'light-blue'),
+        ('Hurt', 3, 'blue'),
+        ('Overwhelmed', 3, 'dark-blue'),
+        ('Annoyed', 4, 'light-red'),
+        ('Frustrated', 4, 'red'),
+        ('Angry', 4, 'dark-red'),
+        ('Embarrassed', 5, 'light-orange'),
+        ('Nervous', 5, 'orange'),
+        ('Worried', 5, 'dark-orange'),
+        ('Irritated', 6, 'light-purple'),
+        ('Distracted', 6, 'purple'),
+        ('Scattered', 6, 'dark-purple');
 
 --insert coping skills
 
