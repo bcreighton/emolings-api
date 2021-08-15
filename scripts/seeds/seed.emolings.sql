@@ -27,9 +27,9 @@ INSERT INTO feeling
 INSERT INTO severity
     (level)
     VALUES
-        ('Low'),
-        ('Medium'),
-        ('High');
+        ('Low', 'blue'),
+        ('Medium', 'orange'),
+        ('High', 'red');
 
 -- insert identifier
 
