@@ -1,26 +1,74 @@
-# Express Boilerplate!
+# EMOLINGS
+The modern age version of a feelings chart for Parents/Caregivers to create better conversations with children about the feelings and emotions they experience on a daily basis.
 
-This is a boilerplate project used for starting new projects!
+This is the backend for `EMOLINGS`.  A live version of the app can be found at [https://emolings-app.vercel.app/](https://emolings-app.vercel.app/)
+
+The front end client can be found at [https://github.com/bcreighton/emolings-app](https://github.com/bcreighton/emolings-app).
+
+## Introduction
+
+Feeling charts are a thing of the past; unfortuantely, they're limited as they're static and although their purpose and intent of feeling identification is decent it doesn't solve the root of the problem. CONVERSATION & COPING SKILLS!
+
+Emolings is a modern age version of a feelings chart!!
+
+Not only does Emolings provide emotion and feeling identification, both from the Parent/Caregiver and Child perspective; but Emolings also provides the next steps which are the most essential.
+* Create open communication between Parent/Guardian and Child
+* Provide suggestions to help Parent/Guardian guide their Child to identify and express their emotions and feelings
+* Present proven coping mechanisms to acknowledge and move through their emotions and feelings in a possitive manner
+
+## Quick App Demo
+
+![Imgur](https://i.imgur.com/O8m5A8w.gif)
+
+## Technology
+
+#### Back End
+
+* Node and Express
+  * RESTful Api
+* Testing
+  * Supertest (integration)
+  * Mocha and Chai (unit)
+* Database
+  * Postgres
+  * Knex.js - SQL wrapper
+
+#### Production
+
+* Deployed via Heroku
 
 ## Set up
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+Major dependencies for this repo include Postgres and Node.
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+To get setup locally, do the following:
 
-## Scripts
+1. Clone this repository to your machine, `cd` into the directory and run `npm install`
 
-Start the application `npm start`
+2. Create the dev and test databases: `createdb -U postgres -d emolings` and `createdb -U postgres -d emolings-test`
 
-Start nodemon for the application `npm run dev`
+3. Generate an API Token here: [https://www.uuidgenerator.net/version4](https://www.uuidgenerator.net/version4)
 
-Run the tests `npm test`
+4. Create a `.env` file in the project root
 
-## Deploying
+Inside these files you'll need the following:
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+````
+NODE_ENV=development
+PORT=8000
+
+DATABASE_URL="postgresql://postgres@localhost/emolings"
+TEST_DATABASE_URL="postgresql://postgres@localhost/emolings-test"
+API_TOKEN="INSERT GENERATED API TOKEN"
+````
+
+5. Run the migrations for dev - `npm run migrate`
+6. Run the migrations for test - `NODE_ENV=test npm run migrate`
+7. Seed the database for dev
+
+* `psql -U <db-user> -d emolings -f ./seeds/seed.emolings.sql`
+
+Now, run this same command again for the test database as well.
+
+7. Run the tests - `npm t`
+8. Start the app - `npm run dev`
