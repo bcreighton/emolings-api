@@ -52,7 +52,7 @@ INSERT INTO identifier
 INSERT INTO reminder
     (reminder)
     VALUES
-        ('Know when you need a breakt from the situation.'),
+        ('Know when you need a break from the situation.'),
         ('Try setting a timer to try again.'),
         ('You too may need to practice a coping skill to be in a good space to assist them in coping.'),
         ('Space may be the solution, but remind them they are not alone.'),
@@ -76,7 +76,7 @@ INSERT INTO adv_feeling
         ('Annoyed', 4, 'light-red'),
         ('Frustrated', 4, 'red'),
         ('Angry', 4, 'dark-red'),
-        ('Embarrassed', 5, 'light-orange'),
+        ('Ashamed', 5, 'light-orange'),
         ('Nervous', 5, 'orange'),
         ('Worried', 5, 'dark-orange'),
         ('Irritated', 6, 'light-purple'),
