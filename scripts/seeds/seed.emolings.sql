@@ -72,7 +72,7 @@ INSERT INTO adv_feeling
         ('Confident', 2, 'dark-yellow'),
         ('Lonely', 3, 'light-blue'),
         ('Hurt', 3, 'blue'),
-        ('Overwhelmed', 3, 'dark-blue'),
+        ('Heavy', 3, 'dark-blue'),
         ('Annoyed', 4, 'light-red'),
         ('Frustrated', 4, 'red'),
         ('Angry', 4, 'dark-red'),
